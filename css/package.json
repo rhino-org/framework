@@ -3,9 +3,10 @@
     "version": "0.1.0",
     "description": "rhinoCSS Helpers",
     "scripts": {
+        "clean": "rimraf dist",
         "dev": "./node_modules/.bin/lessc index.less dist/rhino.css",
         "min": "./node_modules/.bin/lessc index.less dist/rhino.min.css -clean-css",
-        "build": "npm run dev && npm run min"
+        "build": "npm run clean && npm run dev && npm run min"
     },
     "keywords": [
         "rhino",
