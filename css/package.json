@@ -1,0 +1,21 @@
+{
+    "name": "rhinocss",
+    "version": "0.1.0",
+    "description": "rhinoCSS Helpers",
+    "scripts": {
+        "dev": "./node_modules/.bin/lessc index.less dist/rhino.css",
+        "min": "./node_modules/.bin/lessc index.less dist/rhino.min.css -clean-css",
+        "build": "npm run dev && npm run min"
+    },
+    "keywords": [
+        "rhino",
+        "css"
+    ],
+    "author": "Bruno Gonçalves",
+    "license": "MIT",
+    "devDependencies": {
+        "less": "^4.0.0",
+        "clean-css": "4.2.3",
+        "rimraf": "3.0.2"
+    }
+}
