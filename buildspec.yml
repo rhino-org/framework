@@ -15,12 +15,16 @@ phases:
         # Preparar diretorio para o split
         - echo Preparar diretorio para o SPLIT
         - cd $CODEBUILD_SRC_DIR
-        - chmod 777 ./bin/split.sh
-        - chmod 777 ./bin/splitsh-lite
+        #- chmod 777 ./bin/split.sh
+        #- chmod 777 ./bin/splitsh-lite
 
         # Rodar o SPLIT
-        - cp ./bin/split.sh ./split.sh
+        #- cp ./bin/split.sh ./split.sh
         #- ./bin/split.sh
-        - ./split.sh
+        #- ./split.sh
+
+        - git filter-branch --prune-empty --subdirectory-filter css/ main
+        - git remote set-url origin https://github.com/rhino-org/rhino.css.git
+        - git push -u origin main
 
         - echo Finalizou OK
