@@ -17,17 +17,20 @@ phases:
         - cd $CODEBUILD_SRC_DIR
         #- chmod 777 ./bin/split.sh
         #- chmod 777 ./bin/splitsh-lite
+        - chmod 777 ./bin/teste
 
         # Rodar o SPLIT
         #- cp ./bin/split.sh ./split.sh
         #- ./bin/split.sh
         #- ./split.sh
 
-        - git remote -v
-        - git filter-branch --subdirectory-filter css/ -f
-        - git remote set-url origin https://github.com/rhino-org/rhino.css.git
-        - git fetch origin
-        - git push
+        - ./bin/teste.sh
+
+        #- git remote -v
+        #- git filter-branch --subdirectory-filter css/ -f
+        #- git remote set-url origin https://github.com/rhino-org/rhino.css.git
+        #- git fetch origin
+        #- git push
 
 
         - echo Finalizou OK
