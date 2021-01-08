@@ -3,7 +3,7 @@
 set -e
 set -x
 
-CURRENT_BRANCH="master"
+CURRENT_BRANCH="main"
 
 function split()
 {
@@ -18,6 +18,7 @@ function remote()
 
 git pull origin $CURRENT_BRANCH
 
-remote repo_css git@github.com:rhino-org/rhino.css.git
+#remote repo_css git@github.com:rhino-org/rhino.css.git
 
-split 'css' repo_css
+#split 'css' repo_css
+split 'css' 'git@github.com:rhino-org/rhino.css.git'
