@@ -15,7 +15,7 @@ phases:
         # Preparar diretorio para o split
         - echo Preparar diretorio para o SPLIT
         - cd $CODEBUILD_SRC_DIR
-        - git subsplit init https://github.com/rhino-org/framework
+        - git subsplit init https://github.com/rhino-org/framework.git
 
         # Fazer SPLIT
         - echo Fazer SPLIT do projeto
