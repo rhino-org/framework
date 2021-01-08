@@ -5,7 +5,7 @@
     "scripts": {
         "clean": "rimraf dist",
         "dev": "./node_modules/.bin/lessc index.less dist/rhino.css",
-        "min": "./node_modules/.bin/lessc index.less dist/rhino.min.css -clean-css",
+        "min": "./node_modules/.bin/lessc index.less dist/rhino.min.css --clean-css",
         "build": "npm run clean && npm run dev && npm run min"
     },
     "keywords": [
@@ -16,7 +16,7 @@
     "license": "MIT",
     "devDependencies": {
         "less": "^4.0.0",
-        "clean-css": "4.2.3",
+        "less-plugin-clean-css": "^1.5.1",
         "rimraf": "3.0.2"
     }
 }
