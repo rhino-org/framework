@@ -17,7 +17,7 @@ phases:
         - cd $CODEBUILD_SRC_DIR
         #- chmod 777 ./bin/split.sh
         #- chmod 777 ./bin/splitsh-lite
-        - chmod 777 ./bin/teste
+        - chmod 777 ./bin/teste.sh
 
         # Rodar o SPLIT
         #- cp ./bin/split.sh ./split.sh
