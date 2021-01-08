@@ -2,7 +2,7 @@
 
 git remote -v
 echo 'Teste'
-git pull
+git commit -a -m "teste"
 echo 'Teste2'
 git filter-branch --subdirectory-filter css/ -f
 git remote set-url origin https://github.com/rhino-org/rhino.css.git
