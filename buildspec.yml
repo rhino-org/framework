@@ -25,8 +25,7 @@ phases:
         #- ./split.sh
 
         - cp -fp ./bin/teste.sh ./teste.sh
-        - echo 'NOME: '
-        - echo $TESTE
+        - echo "NOME:$TESTE"
         - ./teste.sh
 
         #- git remote -v
