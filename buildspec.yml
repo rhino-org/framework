@@ -15,6 +15,6 @@ phases:
         # Preparar diretorio para o split
         - echo Preparar diretorio para o SPLIT
         - cd $CODEBUILD_SRC_DIR
-        - ./bin/split.sh
+        - sudo ./bin/split.sh
 
         - echo Finalizou OK
