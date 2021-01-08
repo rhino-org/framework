@@ -18,6 +18,6 @@ function remote()
 
 git pull origin $CURRENT_BRANCH
 
-remote css git@github.com:rhino-org/rhino.css.git
+remote repo_css git@github.com:rhino-org/rhino.css.git
 
-split 'css' css
+split 'css' repo_css
