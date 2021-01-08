@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+echo 'NOME: '
+echo $TESTE
 echo '----- filter'
 git filter-branch --subdirectory-filter css/ -f
 echo '----- set-url'
