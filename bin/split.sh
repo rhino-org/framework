@@ -16,6 +16,7 @@ function remote()
     git remote add $1 $2 || true
 }
 
+
 git pull origin $CURRENT_BRANCH
 
 remote css git@github.com:rhino-org/rhino.css.git
