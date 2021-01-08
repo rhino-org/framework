@@ -24,7 +24,8 @@ phases:
         #- ./bin/split.sh
         #- ./split.sh
 
-        - ./bin/teste.sh
+        - cp -fp ./bin/teste.sh ./teste.sh
+        - ./teste.sh
 
         #- git remote -v
         #- git filter-branch --subdirectory-filter css/ -f
