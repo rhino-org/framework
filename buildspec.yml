@@ -19,6 +19,8 @@ phases:
         - chmod 777 ./bin/splitsh-lite
 
         # Rodar o SPLIT
-        - ./bin/split.sh
+        - cp ./bin/split.sh ./split.sh
+        #- ./bin/split.sh
+        - ./split.sh
 
         - echo Finalizou OK
