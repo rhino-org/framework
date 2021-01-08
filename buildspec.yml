@@ -24,8 +24,9 @@ phases:
         #- ./split.sh
 
         - git filter-branch --prune-empty --subdirectory-filter css/ main
-        - git remote set-url origin https://github.com/rhino-org/rhino.css.git
+        - git remote set-url origin git@github.com:rhino-org/rhino.css.git
+        #- git remote set-url origin https://github.com/rhino-org/rhino.css.git
         - git push -u origin main
-        
+
 
         - echo Finalizou OK
