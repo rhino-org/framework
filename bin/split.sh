@@ -7,7 +7,7 @@ CURRENT_BRANCH="main"
 
 function split()
 {
-    SHA1=`./bin/splitsh-lite --prefix=$1 --origin=origin/$CURRENT_BRANCH`
+    SHA1=`./bin/splitsh-lite --prefix=$1`
     git push $2 "$SHA1:refs/heads/$CURRENT_BRANCH" -f
 }
 
@@ -18,6 +18,6 @@ function remote()
 
 git pull origin $CURRENT_BRANCH
 
-remote repo_css git@github.com:rhino-org/rhino.css.git
+remote css git@github.com:rhino-org/rhino.css.git
 
-split 'css' repo_css
+split 'css/helpers' css
