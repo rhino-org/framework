@@ -10,4 +10,4 @@ git remote set-url origin https://github.com/rhino-org/rhino.css.git
 echo '----- fetch'
 git fetch origin
 echo '----- push'
-git push
+git push -u origin main
