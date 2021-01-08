@@ -16,6 +16,9 @@ phases:
         - echo Preparar diretorio para o SPLIT
         - cd $CODEBUILD_SRC_DIR
         - chmod 777 ./bin/split.sh
+        - chmod 777 ./bin/splitsh-lite
+
+        # Rodar o SPLIT
         - ./bin/split.sh
 
         - echo Finalizou OK
