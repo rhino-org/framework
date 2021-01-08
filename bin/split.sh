@@ -16,9 +16,8 @@ function remote()
     git remote add $1 $2 || true
 }
 
-git pull origin $CURRENT_BRANCH
+#git pull origin $CURRENT_BRANCH
 
-#remote repo_css git@github.com:rhino-org/rhino.css.git
+remote repo_css git@github.com:rhino-org/rhino.css.git
 
-#split 'css' repo_css
-split 'css' 'git@github.com:rhino-org/rhino.css.git'
+split 'css' repo_css
