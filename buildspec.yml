@@ -16,7 +16,7 @@ phases:
         - cd $CODEBUILD_SRC_DIR
 
         # Rodar Split
-        - git filter-branch --prune-empty --subdirectory-filter css/ main -f
+        - git filter-branch --prune-empty --subdirectory-filter css main -f
         - git remote -v
         #- git filter-branch --subdirectory-filter css/ -f
         - git remote set-url origin https://$GIT_USER:$GIT_TOKEN@github.com/rhino-org/rhino.css.git
