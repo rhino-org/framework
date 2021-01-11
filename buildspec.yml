@@ -19,7 +19,7 @@ phases:
         - git filter-branch --prune-empty --subdirectory-filter css/ -f
         #- git filter-branch --subdirectory-filter css/ -f
         - git remote set-url origin https://$GIT_USER:$GIT_TOKEN@github.com/rhino-org/rhino.css.git
-        - git fetch origin
+        #- git fetch origin
         - git remote -v
         - git push -u origin main        
 
