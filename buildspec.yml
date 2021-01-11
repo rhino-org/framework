@@ -13,26 +13,13 @@ phases:
   build:
     commands:
         # Preparar diretorio para o split
-        - echo Preparar diretorio para o SPLIT
         - cd $CODEBUILD_SRC_DIR
-        #- chmod 777 ./bin/split.sh
-        #- chmod 777 ./bin/splitsh-lite
-        - chmod 777 ./bin/teste.sh
 
-        # Rodar o SPLIT
-        #- cp ./bin/split.sh ./split.sh
-        #- ./bin/split.sh
-        #- ./split.sh
-
-        - cp -fp ./bin/teste.sh ./teste.sh
-        - echo "NOME:$TESTE"
-        - ./teste.sh
-
-        #- git remote -v
-        #- git filter-branch --subdirectory-filter css/ -f
-        #- git remote set-url origin https://github.com/rhino-org/rhino.css.git
-        #- git fetch origin
-        #- git push
-
+        # Rodar Split
+        - git filter-branch --subdirectory-filter css/ -f
+        - git remote set-url origin https://$GIT_USER:$GIT_TOKEN@github.com/rhino-org/rhino.css.git
+        - git fetch origin
+        - git remote -v
+        - git push origin main        
 
         - echo Finalizou OK
