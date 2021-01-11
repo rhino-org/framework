@@ -16,12 +16,15 @@ phases:
         - cd $CODEBUILD_SRC_DIR
 
         # Rodar Split
-        - git filter-branch --prune-empty --subdirectory-filter css main -f
-        - git remote -v
+        - git remote add repo_css https://$GIT_USER:$GIT_TOKEN@github.com/rhino-org/rhino.css.git
+        - git subtree add --prefix=css/ repo_css
+        - git push
+        #- git filter-branch --prune-empty --subdirectory-filter css main -f
+        #- git remote -v
         #- git filter-branch --subdirectory-filter css/ -f
-        - git remote set-url origin https://$GIT_USER:$GIT_TOKEN@github.com/rhino-org/rhino.css.git
+        #- git remote set-url origin https://$GIT_USER:$GIT_TOKEN@github.com/rhino-org/rhino.css.git
         #- git fetch origin
-        - git remote -v
-        - git push -u origin main        
+        #- git remote -v
+        #- git push -u origin main        
 
         - echo Finalizou OK
