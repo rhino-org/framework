@@ -6,6 +6,9 @@ phases:
         nodejs: 10
 
     commands:
+        - cd /git/contrib/subtree
+        - make
+        - ./install -m 755 git-subtree /usr/lib/git-core
         #- git clone https://github.com/dflydev/git-subsplit.git
         #- cd git-subsplit
         #- ./install.sh
