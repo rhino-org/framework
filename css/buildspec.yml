@@ -17,7 +17,7 @@ phases:
 
 artifacts:
   files:
-    - dist/rhino.css
-    - dist/rhino.min.css
+    - rhino.css
+    - rhino.min.css
   discard-paths: yes
   base-directory: dist/
