@@ -5,12 +5,15 @@ phases:
     runtime-versions:
         nodejs: 10
 
+    commands:
+      - cd $CODEBUILD_SRC_DIR
+      - npm install
+
   build:
     commands:
-        - cd $CODEBUILD_SRC_DIR
-        - npm install
-        - npm run build
-        - echo Finalizou OK
+      - cd $CODEBUILD_SRC_DIR
+      - npm run build
+      - echo Finalizou OK
 
   artifacts:
     files:
