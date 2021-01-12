@@ -15,7 +15,7 @@ phases:
       - npm run build
       - echo Finalizou OK
 
-  artifacts:
-    files:
-      - dist/rhino.css
-      - dist/rhino.min.css
+artifacts:
+  files:
+    - dist/rhino.css
+    - dist/rhino.min.css
