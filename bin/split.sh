@@ -1,7 +1,24 @@
 #!/usr/bin/env bash
 
-git filter-branch --subdirectory-filter css/ -f
-git remote set-url origin https://$GIT_USER:$GIT_TOKEN@github.com/rhino-org/rhino.css.git
-git fetch origin
-git remote -v
-git push origin main
+set -e
+set -x
+
+CURRENT_BRANCH="main"
+
+function split()
+{
+    SHA1=`./bin/splitsh-lite --prefix=$1`
+    git push $2 "$SHA1:refs/heads/$CURRENT_BRANCH" -f
+}
+
+function remote()
+{
+    git remote add $1 $2 || true
+}
+
+
+git pull origin $CURRENT_BRANCH
+
+remote css https://$GIT_USER:$GIT_TOKEN@github.com/rhino-org/rhino.css.git
+
+split 'css/' css
