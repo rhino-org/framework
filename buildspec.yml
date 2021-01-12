@@ -14,7 +14,7 @@ phases:
     commands:
         # Preparar diretorio para o split
         - cd $CODEBUILD_SRC_DIR
-        - chmod 777 ./bin/slit2.sh
+        - chmod 777 ./bin/split2.sh
 
         # Rodar Split
         - ./bin/split2.sh
