@@ -6,9 +6,6 @@ phases:
         nodejs: 10
 
     commands:
-        - cd /git/contrib/subtree
-        - make
-        - ./install -m 755 git-subtree /usr/lib/git-core
         #- git clone https://github.com/dflydev/git-subsplit.git
         #- cd git-subsplit
         #- ./install.sh
@@ -17,11 +14,16 @@ phases:
     commands:
         # Preparar diretorio para o split
         - cd $CODEBUILD_SRC_DIR
+        - chmod 777 ./bin/slit2.sh
 
         # Rodar Split
-        - git remote add repo_css https://$GIT_USER:$GIT_TOKEN@github.com/rhino-org/rhino.css.git
-        - git subtree add --prefix=css/ repo_css
-        - git push
+        - ./bin/split2.sh
+
+        # Rodar Split
+        #- git remote add repo_css https://$GIT_USER:$GIT_TOKEN@github.com/rhino-org/rhino.css.git
+        #- git subtree add --prefix=css/ repo_css
+        #- git push
+
         #- git filter-branch --prune-empty --subdirectory-filter css main -f
         #- git remote -v
         #- git filter-branch --subdirectory-filter css/ -f
