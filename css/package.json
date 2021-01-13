@@ -11,7 +11,10 @@
         "rhino",
         "css"
     ],
-    "author": "Bruno Gonçalves",
+    "contributors": [
+        "Bruno Gonçalves",
+        "Tiago Gonçalves"
+    ],
     "license": "MIT",
     "devDependencies": {
         "less": "^4.0.0",
