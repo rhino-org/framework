@@ -18,6 +18,7 @@ phases:
 artifacts:
   discard-paths: yes
   base-directory: dist/
+  name: teste
   files:
     - rhino.css
     - rhino.min.css
