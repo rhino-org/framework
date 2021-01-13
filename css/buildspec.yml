@@ -17,8 +17,6 @@ phases:
       - npm run clean
       - ./node_modules/.bin/lessc index.less dist/rhino-$APP_VERSION.css
       - ./node_modules/.bin/lessc index.less dist/rhino-$APP_VERSION.min.css --clean-css
-      #- npm run dev --app=$APP_VERSION
-      #- npm run prod --app=$APP_VERSION
       - echo Finalizou OK
 
 artifacts:
