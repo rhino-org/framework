@@ -20,5 +20,7 @@ function remote()
 git pull origin $CURRENT_BRANCH
 
 remote css https://$GIT_USER:$GIT_TOKEN@github.com/rhino-org/rhino.css.git
+remote js https://$GIT_USER:$GIT_TOKEN@github.com/rhino-org/rhino.js.git
 
 split 'css/' css
+split 'js/' js
