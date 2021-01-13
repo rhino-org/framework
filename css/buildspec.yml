@@ -15,8 +15,8 @@ phases:
   build:
     commands:
       - npm run clean
-      - npm run dev --ver=$APP_VERSION
-      - npm run prod --ver=$APP_VERSION
+      - npm run dev --app=$APP_VERSION
+      - npm run prod --app=$APP_VERSION
       - echo Finalizou OK
 
 artifacts:
