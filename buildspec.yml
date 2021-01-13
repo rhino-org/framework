@@ -6,7 +6,6 @@ phases:
         nodejs: 10
 
     commands:
-        - cd $CODEBUILD_SRC_DIR
         - chmod 777 ./bin/split.sh
         - chmod 777 ./bin/splitsh-lite
 

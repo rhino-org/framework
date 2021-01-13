@@ -4,8 +4,8 @@
     "description": "rhinoCSS Helpers",
     "scripts": {
         "clean": "rimraf dist",
-        "dev":   "./node_modules/.bin/lessc index.less dist/rhino-%npm_config_ver%.css",
-        "prod":  "./node_modules/.bin/lessc index.less dist/rhino-%npm_config_ver%.min.css --clean-css"
+        "dev":   "./node_modules/.bin/lessc index.less dist/rhino.css",
+        "prod":  "./node_modules/.bin/lessc index.less dist/rhino.min.css --clean-css"
     },
     "keywords": [
         "rhino",
