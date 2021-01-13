@@ -22,7 +22,7 @@ phases:
 artifacts:
   discard-paths: yes
   base-directory: dist/
-  name: css/$APP_VERSION
+  name: css
   files:
-    - rhino.css
-    - rhino.min.css
+    - rhino-$APP_VERSION.css
+    - rhino-$APP_VERSION.min.css
