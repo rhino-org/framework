@@ -1,5 +1,9 @@
 version: 0.2
 
+env:
+  variables:
+    APP_VERSION: "1.0.0"
+
 phases:
   install:
     runtime-versions:
@@ -11,14 +15,14 @@ phases:
   build:
     commands:
       - npm run clean
-      - npm run dev
-      - npm run prod
+      - npm run dev --ver=$APP_VERSION
+      - npm run prod --ver=$APP_VERSION
       - echo Finalizou OK
 
 artifacts:
   discard-paths: yes
   base-directory: dist/
-  name: teste
+  name: css/$APP_VERSION
   files:
     - rhino.css
     - rhino.min.css
