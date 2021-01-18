@@ -1,11 +1,53 @@
-.text-left, .txt-l {
-    text-align: left;
-}
+.txt-compile(left,      text-align,         left);
+.txt-compile(center,    text-align,         center);
+.txt-compile(right,     text-align,         right);
+.txt-compile(normal,    font-weight,        normal);
+.txt-compile(bold,      font-weight,        bold);
+.txt-compile(italic,    font-style,         italic);
+.txt-compile(underline, text-decoration,    underline);
+.txt-compile(upper,     text-transform,     uppercase);
+.txt-compile(lower,     text-transform,     lowercase);
 
-.text-center, .txt-c {
-    text-align: center;
-}
+/* funcão de compilação */
+.txt-compile(@classname, @prop, @val){
 
-.text-right, .txt-r {
-    text-align: right;
+    .txt-@{classname}{
+        @{prop}: @val;
+    }
+
+    /* fullhd */
+    @media only screen and (min-width:@fullhd-min){
+        .txt-@{classname}-fullhd{
+            @{prop}: @val!important;
+        }
+    }
+
+     /* widescreen */
+     @media only screen and (min-width:@widescreen-min) and (max-width:@widescreen-max){
+        .txt-@{classname}-widescreen{
+            @{prop}: @val!important;
+        }
+     }
+
+     /* desktop */
+    @media only screen and (min-width:@desktop-min) and (max-width:@desktop-max){
+        .txt-@{classname}-desktop{
+            @{prop}: @val!important;
+        }
+    }
+
+     /* Tablet */
+     @media only screen and (min-width:@tablet-min) and (max-width:@tablet-max){
+        .txt-@{classname}-tablet{
+            @{prop}: @val!important;
+        }
+     }
+
+     /* Mobile */
+    @media only screen and (max-width:@phone-max){
+        .txt-@{classname}-phone{
+            @{prop}: @val!important;
+        }
+    }
+
 }
