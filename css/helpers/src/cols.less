@@ -1,0 +1,161 @@
+.cols{
+    display: flex;
+
+    &.cols-wrap{
+        flex-wrap:initial;
+    }
+    
+}
+
+/* relativo a 12 colunas*/
+.fnc_cols_relative(1, 12);
+.fnc_cols_relative(2, 12);
+.fnc_cols_relative(3, 12);
+.fnc_cols_relative(4, 12);
+.fnc_cols_relative(5, 12);
+.fnc_cols_relative(6, 12);
+.fnc_cols_relative(7, 12);
+.fnc_cols_relative(8, 12);
+.fnc_cols_relative(9, 12);
+.fnc_cols_relative(10, 12);
+.fnc_cols_relative(11, 12);
+.fnc_cols_relative(12, 12);
+
+/* relativo a 11 colunas*/
+.fnc_cols_relative(1, 11);
+.fnc_cols_relative(2, 11);
+.fnc_cols_relative(3, 11);
+.fnc_cols_relative(4, 11);
+.fnc_cols_relative(5, 11);
+.fnc_cols_relative(6, 11);
+.fnc_cols_relative(7, 11);
+.fnc_cols_relative(8, 11);
+.fnc_cols_relative(9, 11);
+.fnc_cols_relative(10, 11);
+.fnc_cols_relative(11, 11);
+
+/* relativo a 10 colunas*/
+.fnc_cols_relative(1, 10);
+.fnc_cols_relative(2, 10);
+.fnc_cols_relative(3, 10);
+.fnc_cols_relative(4, 10);
+.fnc_cols_relative(5, 10);
+.fnc_cols_relative(6, 10);
+.fnc_cols_relative(7, 10);
+.fnc_cols_relative(8, 10);
+.fnc_cols_relative(9, 10);
+.fnc_cols_relative(10, 10);
+
+/* relativo a 9 colunas*/
+.fnc_cols_relative(1, 9);
+.fnc_cols_relative(2, 9);
+.fnc_cols_relative(3, 9);
+.fnc_cols_relative(4, 9);
+.fnc_cols_relative(5, 9);
+.fnc_cols_relative(6, 9);
+.fnc_cols_relative(7, 9);
+.fnc_cols_relative(8, 9);
+.fnc_cols_relative(9, 9);
+
+/* relativo a 8 colunas*/
+.fnc_cols_relative(1, 8);
+.fnc_cols_relative(2, 8);
+.fnc_cols_relative(3, 8);
+.fnc_cols_relative(4, 8);
+.fnc_cols_relative(5, 8);
+.fnc_cols_relative(6, 8);
+.fnc_cols_relative(7, 8);
+.fnc_cols_relative(8, 8);
+
+/* relativo a 7 colunas*/
+.fnc_cols_relative(1, 7);
+.fnc_cols_relative(2, 7);
+.fnc_cols_relative(3, 7);
+.fnc_cols_relative(4, 7);
+.fnc_cols_relative(5, 7);
+.fnc_cols_relative(6, 7);
+.fnc_cols_relative(7, 7);
+
+/* relativo a 6 colunas*/
+.fnc_cols_relative(1, 6);
+.fnc_cols_relative(2, 6);
+.fnc_cols_relative(3, 6);
+.fnc_cols_relative(4, 6);
+.fnc_cols_relative(5, 6);
+.fnc_cols_relative(6, 6);
+
+/* relativo a 5 colunas*/
+.fnc_cols_relative(1, 5);
+.fnc_cols_relative(2, 5);
+.fnc_cols_relative(3, 5);
+.fnc_cols_relative(4, 5);
+.fnc_cols_relative(5, 5);
+
+/* relativo a 4 colunas*/
+.fnc_cols_relative(1, 4);
+.fnc_cols_relative(2, 4);
+.fnc_cols_relative(3, 4);
+.fnc_cols_relative(4, 4);
+.fnc_cols_relative(5, 4);
+
+/* relativo a 3 colunas*/
+.fnc_cols_relative(1, 3);
+.fnc_cols_relative(2, 3);
+.fnc_cols_relative(3, 3);
+
+/* relativo a 2 colunas*/
+.fnc_cols_relative(1, 2);
+.fnc_cols_relative(2, 2);
+
+/* relativo a 1 colunas*/
+.fnc_cols_relative(1, 1);
+
+
+/* Função de Compilação */
+
+.fnc_cols_relative(@col, @total){
+
+    .col-@{col}-@{total}{
+        flex: none;
+        width: (100% / @total * @col);
+    }
+    
+    /* fullhd */
+    @media only screen and (min-width:@fullhd-min){
+        .col-@{col}-@{total}-fullhd{
+            flex: none;
+            width: (100% / @total * @col)!important;
+        }
+    } 
+    /* widescreen */
+    @media only screen and (min-width:@widescreen-min) and (max-width:@widescreen-max){
+        .col-@{col}-@{total}-widescreen{
+            flex: none;
+            width: (100% / @total * @col)!important;
+        }
+    } 
+    /* desktop */
+    @media only screen and (min-width:@desktop-min) and (max-width:@desktop-max){
+        .col-@{col}-@{total}-desktop{
+            flex: none;
+            width: (100% / @total * @col)!important;
+        }
+    }
+
+    /* Tablet */
+    @media only screen and (min-width:@tablet-min) and (max-width:@tablet-max){
+        .col-@{col}-@{total}-tablet{
+            flex: none;
+            width: (100% / @total * @col)!important;
+        }
+    }
+
+    /* Mobile */
+    @media only screen and (max-width:@phone-max){
+        .col-@{col}-@{total}-mobile{
+            flex: none;
+            width: (100% / @total * @col)!important;
+        }
+    }
+    
+}
