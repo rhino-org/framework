@@ -121,38 +121,38 @@
     }
     
     /* fullhd */
-    @media only screen and (min-width:@fullhd-min){
-        .col-@{col}-@{total}-fullhd{
+    @media only screen and (min-width:@s5-min){
+        .col-@{col}-@{total}-s5{
             flex: none;
             width: (100% / @total * @col)!important;
         }
     } 
     /* widescreen */
-    @media only screen and (min-width:@widescreen-min) and (max-width:@widescreen-max){
-        .col-@{col}-@{total}-widescreen{
+    @media only screen and (min-width:@s4-min) and (max-width:@s4-max){
+        .col-@{col}-@{total}-s4{
             flex: none;
             width: (100% / @total * @col)!important;
         }
     } 
     /* desktop */
-    @media only screen and (min-width:@desktop-min) and (max-width:@desktop-max){
-        .col-@{col}-@{total}-desktop{
+    @media only screen and (min-width:@s3-min) and (max-width:@s3-max){
+        .col-@{col}-@{total}-s3{
             flex: none;
             width: (100% / @total * @col)!important;
         }
     }
 
     /* Tablet */
-    @media only screen and (min-width:@tablet-min) and (max-width:@tablet-max){
-        .col-@{col}-@{total}-tablet{
+    @media only screen and (min-width:@s2-min) and (max-width:@s2-max){
+        .col-@{col}-@{total}-s2{
             flex: none;
             width: (100% / @total * @col)!important;
         }
     }
 
     /* Mobile */
-    @media only screen and (max-width:@phone-max){
-        .col-@{col}-@{total}-mobile{
+    @media only screen and (max-width:@s1-max){
+        .col-@{col}-@{total}-s1{
             flex: none;
             width: (100% / @total * @col)!important;
         }
