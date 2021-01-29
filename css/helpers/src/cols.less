@@ -1,5 +1,6 @@
 .cols{
     display: flex;
+    width: 100%;
 
     &.cols-wrap{
         flex-wrap:initial;
@@ -184,6 +185,11 @@
     .col-@{col}-@{total}{
         flex: none;
         width: (100% / @total * @col);
+    }
+
+    .col-off-@{col}-@{total}{
+        flex: none;
+        margin-left: (100% / @total * @col);
     }
     
     /* fullhd */
