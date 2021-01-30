@@ -18,6 +18,7 @@ phases:
       - ./node_modules/.bin/lessc index.less dist/rhino-$APP_VERSION.css
       - ./node_modules/.bin/lessc index.less dist/rhino-$APP_VERSION.min.css --clean-css
       - echo Finalizou OK
+      
 
 artifacts:
   discard-paths: yes
