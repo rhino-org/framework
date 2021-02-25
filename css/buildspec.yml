@@ -2,7 +2,7 @@ version: 0.2
 
 env:
   variables:
-    APP_VERSION: "1.4.0"
+    APP_VERSION: "1.5.0"
 
 phases:
   install:
@@ -18,6 +18,8 @@ phases:
       - npm run clean
       - ./node_modules/.bin/lessc index.less dist/rhino-$APP_VERSION.css
       - ./node_modules/.bin/lessc index.less dist/rhino-$APP_VERSION.min.css --clean-css
+      - ./node_modules/.bin/lessc no-conflict.less dist/rhino-noconflict-$APP_VERSION.css
+      - ./node_modules/.bin/lessc no-conflict.less dist/rhino-noconflict-$APP_VERSION.min.css --clean-css
 
       # Atualizar repositorio de assets
       - git clone https://$GITHUB_TOKEN@github.com/rhino-org/assets.git _assets
@@ -26,6 +28,8 @@ phases:
       # Copiar arquivos compilados para a pasta css
       - cp -frvp $CODEBUILD_SRC_DIR/dist/rhino-$APP_VERSION.css ./
       - cp -frvp $CODEBUILD_SRC_DIR/dist/rhino-$APP_VERSION.min.css ./
+      - cp -frvp $CODEBUILD_SRC_DIR/dist/rhino-noconflict-$APP_VERSION.css ./
+      - cp -frvp $CODEBUILD_SRC_DIR/dist/rhino-noconflict-$APP_VERSION.min.css ./      
       - cd ../
       
       # Fazer um novo commit agora com a nova documentação de /dev
@@ -44,4 +48,6 @@ phases:
 #  name: css
 #  files:
 #    - rhino-$APP_VERSION.css
-#    - rhino-$APP_VERSION.min.css
+#    - rhino-$APP_VERSION.min.css# 
+#    - rhino-noconflict-$APP_VERSION.css
+#    - rhino-noconflict-$APP_VERSION.min.css
