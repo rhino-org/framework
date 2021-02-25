@@ -1,6 +1,6 @@
 {
     "name": "rhinocss",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "description": "rhinoCSS Helpers",
     "scripts": {
         "clean": "rimraf dist",
@@ -19,6 +19,7 @@
     "devDependencies": {
         "less": "^4.0.0",
         "less-plugin-clean-css": "^1.5.1",
+        "less-plugin-no-comments": "^0.1.0",
         "rimraf": "3.0.2"
     }
 }
